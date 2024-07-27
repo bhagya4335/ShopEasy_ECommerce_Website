@@ -7,16 +7,22 @@ This is a responsive e-commerce website designed to showcase and purchase variou
 
 ## Features
 
-- **Responsive Design***: Optimized for different screen sizes and devices.
-- **Search Bar**********: Allows users to search for products.
-- **Product Cards*******: Displays product information with images, titles, and descriptions.
-- **Shopping Cart*******: Users can add items to their cart and view their selections.
-- **Checkout Process****: Streamlined checkout with a clear user interface.
-- **Sidebar Navigation**: Includes links to different product categories and sections.
+- **Responsive Design** : Optimized for different screen sizes and devices.
+- **Search Bar** : Allows users to search for products.
+- **Product Cards** : Displays product information with images, titles, and descriptions.
+- **Shopping Cart** : Users can add items to their cart and view their selections.
+- **Checkout Process** : Streamlined checkout with a clear user interface.
+- **Sidebar Navigation** : Includes links to different product categories and sections.
 
 ## Technologies Used
 
-- **HTML********: For structuring the content.
-- **CSS*********: For styling and layout, including gradients, responsive design, and interactive elements.
-- **JavaScript**: For dynamic interactions and functionality.
-- **Bootstrap***: Used for responsive design and component styling.
+- **HTML** : This is used to structure the content.
+- **CSS** : For styling and layout, including gradients, responsive design, and interactive elements.
+- **JavaScript** : For dynamic interactions and functionality.
+- **Bootstrap** : Used for responsive design and component styling.
+
+![Homepage](images/Homepage.png)
+
+![Product Page](images/shopcart.png)
+
+![Shopping Cart](images/checkout.png)
