@@ -21,8 +21,15 @@ This is a responsive e-commerce website designed to showcase and purchase variou
 - **JavaScript** : For dynamic interactions and functionality.
 - **Bootstrap** : Used for responsive design and component styling.
 
-![Homepage](images/Homepage.png)
 
-![Product Page](images/shopcart.png)
+## Some Images of ShopEasy E-Commerce Website
+### Homepage
+![Homepage](Homepage.png)
 
-![Shopping Cart](images/checkout.png)
+
+### Shopping Cart
+![Shopcart](shopcart.png)
+
+
+### Checkout
+![Checkout](checkout.png)
