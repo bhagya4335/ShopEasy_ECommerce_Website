@@ -1,0 +1,217 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #071952, #088395, #37b7c3, #ebf4f6); /* Gradient background for the body */
+}
+
+.custom-navbar {
+    background: linear-gradient(to right, #37b7c3, #088395); /* Gradient background for the navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    position: relative; /* Ensure relative positioning for centering */
+}
+
+.search-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjust the width of the search bar */
+    max-width: 780px; /* Optional: Set a maximum width */
+}
+.search-bar input[type="search"] {
+    width: 70%; /* Adjust the width of the input field */
+    border-radius: 5px 0 0 5px; /* Optional: Rounded corners */
+}
+.search-bar button {
+    width: 10%; /* Adjust the width of the button */
+    border-radius: 0 5px 5px 0; /* Optional: Rounded corners */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold; /* Make the brand name bold */
+    color: #ebf4f6; /* White text color */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Increase font size */
+    color: #ebf4f6; /* White text color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #37b7c3; /* Change color on hover */
+}
+
+.small-container {
+    max-width: 800px; /* Set maximum width for the container */
+    margin: auto; /* Center the container */
+    max-height: 500px; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+    padding: 20px; /* Add padding */
+    background-color: rgba(235, 244, 246, 0.9); /* Slightly transparent background for better readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #ebf4f6; /* Light background for cards */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px; /* Set a smaller height for the image */
+    object-fit: contain; /* Ensure the image covers the area without distortion */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #071952; /* Dark text color */
+    text-align: center;
+}
+
+.card-text {
+    color: #088395; /* Accent text color */
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #37b7c3; /* Blue primary button */
+    border-color: #37b7c3;
+    margin-top: 20px; /* Add space above the button */
+    margin-bottom: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #088395; /* Darker blue on hover */
+    border-color: #088395;
+}
+
+.btn-secondary {
+    background-color: #3d8bc8; /* Dark secondary button */
+    border-color: #3d8bc8;
+    color: #ebf4f6; /* White text color */
+}
+
+.btn-secondary:hover {
+    background-color: #236c43; /* Darker green on hover */
+    border-color: #236c43;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.quantity-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-danger {
+    background-color: #f44336; /* Red danger button */
+    border-color: #f44336;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+    border-color: #b71c1c;
+}
+
+.form-control {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: .25rem;
+}
+
+.form-control:focus {
+    border-color: #37b7c3; /* Blue border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(55, 183, 195, 0.25);
+}
+
+/* Background Colors */
+#products {
+    background-color: rgba(235, 244, 246, 0.8); /* Semi-transparent white background for Products section */
+}
+
+#cart {
+    background-color: rgba(235, 244, 246, 0.8); /* Semi-transparent white background for Cart section */
+}
+
+#checkout {
+    background-color: rgba(235, 244, 246, 0.8); /* Semi-transparent white background for Checkout section */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #071952; /* Dark background color */
+    color: #ebf4f6; /* White text color */
+    padding: 20px 0; /* Padding top and bottom */
+    text-align: center; /* Center align text */
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Add space above the footer */
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+    background: linear-gradient(to right, #088395, #37b7c3, #ebf4f6);
+    height: 100%; /* Match sidebar height with content */
+    padding: 20px; /* Add padding inside the sidebar */
+    color: #333; /* Text color */ 
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    border-right: 1px solid #ccc; /* Light border on the right */
+    margin-top: 47px;
+}
+
+.sidebar ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #333; /* Dark text color for links */
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+.sidebar ul ul {
+    margin-top: 5px;
+}
+
+.sidebar ul ul li a {
+    padding-left: 30px; /* Indent nested items */
+}
+
+.sidebar ul ul ul li a {
+    padding-left: 45px; /* Further indent third-level items */
+}
+
+

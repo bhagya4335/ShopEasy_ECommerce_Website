@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+        <a class="navbar-brand" href="#">ShopEasy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="logo">
+            <a href="#" class="navbar-brand">
+                <img src="logo.png" alt="shopEasy Logo" style="height: 50px;">
+            </a>
+        </div>
+
+           <!-- Search Bar (Centered) -->
+        <div class="search-bar">
+            <form id="searchForm" class="form-inline my-2 my-lg-0">
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    
+     
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto"> 
+                <li>
+                <a href="#" class="navbar-brand">
+                    <img src="home.png" alt="shopEasy Logo" style="height: 35px; margin-right: -25px; margin-bottom: 10px;">
+                </a>
+            </li>
+                <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="homeDropdown">
+                        <a class="dropdown-item" href="#" onclick="loadProducts('products')">All Products</a>
+                        <a class="dropdown-item" href="#" onclick="loadProducts('mensClothing')">Men's Clothing</a>
+                        <a class="dropdown-item" href="#" onclick="loadProducts('womensClothing')">Women's Clothing</a>
+                        <a class="dropdown-item" href="#" onclick="loadProducts('footwear')">Footwear</a>
+                   </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="#checkout">Checkout</a></li>
+            </ul>
+        </div>    
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 bg-light sidebar">
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#allProductsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">All</a>
+                        <ul class="collapse list-unstyled" id="allProductsSubmenu">
+                            <li><a href="#" onclick="loadProducts('products')">All Products</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#allProductsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Clothing</a>
+                        <ul class="collapse list-unstyled" id="allProductsSubmenu">
+                            <li><a href="#" onclick="loadProducts('mensClothing')">Men's Clothing</a></li>
+                            <li><a href="#" onclick="loadProducts('womensClothing')">Women's Clothing</a></li>
+                            <li><a href="#">Kid's Section</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#allProductsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">FootWear</a>
+                        <ul class="collapse list-unstyled" id="allProductsSubmenu">
+                            <li><a href="#" onclick="loadProducts('footwear')">All Footwear</a></li>
+                            <li><a href="#" >Snickers</a></li>
+                            <li><a href="#" >Heels</a></li>
+                            <li><a href="#" >Flisp-Flop</a></li>
+                            <li><a href="#">Sports</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#allProductsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Electronics</a>
+                        <ul class="collapse list-unstyled" id="allProductsSubmenu">
+                            <li><a href="#" >Fans</a></li>
+                            <li><a href="#" >Mobiles</a></li>
+                            <li><a href="#" >Laptops</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#allProductsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home & Kitchen</a>
+                        <ul class="collapse list-unstyled" id="allProductsSubmenu">
+                            <li><a href="#" >Furniture</a></li>
+                            <li><a href="#" >Home Decore</a></li>
+                            <li><a href="#" >Kitchen Appliances</a></li>
+                        </ul>
+                    </li>
+                </ul>         
+            </div>
+
+         <!-- Main Content -->
+         <div class="col-md-10">
+            <section id="products" class="container mt-5">
+                <h1>Products</h1>
+                <div class="row" id="product-list">
+                    <!-- Product items will be added here dynamically -->
+                </div>
+            </section>
+
+            <section id="cart" class="container mt-5">
+                <h2>Shopping Cart</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- Cart items will be added here dynamically -->
+                    </tbody>
+                </table>
+                <a href="#checkout" target="blank" class="btn btn-primary">Proceed To Buy</a>
+            </section>
+
+            <section id="checkout" class="container mt-5">
+                <h2>Checkout</h2>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment">Payment Method</label>
+                        <select class="form-control" id="payment" required>
+                            <option value="creditCard">Credit Card</option>
+                            <option value="debitCard">Debit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="COD">Cash On Delivery</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Complete Purchase</button>
+                    <a href="index.html" class="btn btn-primary">Back to Shopping</a>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ShopEasy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
